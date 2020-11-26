@@ -1,0 +1,20 @@
+{
+  "name": "foodvilla",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Karan Karale",
+  "scripts": {
+    "serve": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "sudo": "^1.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
