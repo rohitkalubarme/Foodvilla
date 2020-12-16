@@ -2,7 +2,7 @@
   "name": "foodvilla",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "karan karale",
+  "author": "Rohit Kalubarme",
   "scripts": {
     "serve": "node server.js",
     "dev": "nodemon server.js",
@@ -13,11 +13,17 @@
   "license": "MIT",
   "dependencies": {
     "autoprefixer": "^10.0.4",
+    "axios": "^0.21.0",
+    "connect-mongo": "^3.2.0",
     "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
     "express-ejs-layouts": "^2.5.0",
+    "express-flash": "^0.0.2",
+    "express-session": "^1.17.1",
     "mongoose": "^5.11.3",
+    "noty": "^3.2.0-beta",
     "postcss": "^8.1.10",
     "tailwindcss": "^2.0.1"
   },

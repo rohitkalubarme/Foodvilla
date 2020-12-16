@@ -1,5 +1,9 @@
 @import './variables';
-$primary:#FE5F1E;
+@import '~noty/src/noty.scss';
+@import '~noty/src/themes/mint.scss';
+
+
+$primary:#fe5f1e;
 $primary-hover:#b23301;
 $secondary:#F8F8F8;
 $pure:#FFF;
@@ -42,6 +46,9 @@ section.hero{
         border-color:$pure;
         color:$pure;
     }
+    &:focus{
+        outline: none;
+    }
 }
 .btn-primary{
     background:$primary;
@@ -67,6 +74,7 @@ section.login{
         }
     }
 }
+
 section.register{
     background:$secondary;
     min-height:calc(100vh-86px);
@@ -76,4 +84,8 @@ section.register{
             color:$primary-hover;
         }
     }
+}
+.noty_theme__mint {
+    border-radius:50px !important;
+    padding-left:8px !important;
 }
