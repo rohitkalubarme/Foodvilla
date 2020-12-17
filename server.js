@@ -4,7 +4,7 @@ const app =  express()
 const ejs = require('ejs')
 const path = require('path')
 const expressLayout = require('express-ejs-layouts')
-const PORT =process.env.PORT || 3209
+const PORT =process.env.PORT || 3293
 const mongoose = require('mongoose')
 const session =require('express-session')
 const flash =require('express-flash')
@@ -42,11 +42,14 @@ app.use(flash())
 
 app.use(express.static('public'))
 
+app.use(express.urlencoded({extended:false}))
+
 app.use(express.json())
 
 //Global middleware
 app.use((req,res,next)=>{
        res.locals.session=req.session
+       res.locals.user = req.user
        next()
  })
 
