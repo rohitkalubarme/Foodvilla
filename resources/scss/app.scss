@@ -2,7 +2,8 @@
 @import '~noty/src/noty.scss';
 @import '~noty/src/themes/mint.scss';
 
-
+$fancy:#e34646;
+$original:green;
 $primary:#fe5f1e;
 $primary-hover:#b23301;
 $secondary:#F8F8F8;
@@ -18,10 +19,10 @@ body{
    
 }
 nav li:last-child a{
-     background: $primary ;
-     &:hover{
-         background:$primary-hover;
-     }
+    background: $primary;
+    &:hover{
+        background: $primary-hover;
+    }
 }
 nav li a{
     transition:$smooth;
@@ -31,6 +32,29 @@ nav li a{
 }
 section.hero{
     background:$secondary;
+}
+
+section.sliding{
+    margin: 0;
+    padding: 0;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:#23e3c9;
+}
+
+section.slider{
+    width: 800px;
+    height:500px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+section.slides{
+    width: 500%;
+    height:500px;
+    display:flex;
 }
 
 .size{
@@ -89,3 +113,168 @@ section.register{
     border-radius:50px !important;
     padding-left:8px !important;
 }
+
+a.link{
+    color:$fancy;
+}
+a.phone{
+    color:$original;
+}
+
+section.status {
+    background:$secondary;
+    min-height: calc(100vh-86px);
+}
+
+.status-box{
+    padding: 60px 0 0;
+}
+.status-box ul {
+    margin-left: 84px;
+}
+
+.status-box ul li span{
+    position: relative;
+    padding-left: 20px;
+}
+// Dots
+
+.status-box ul li span:after{
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    background: $dark;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 0 1px 10px $secondary;
+}
+
+//Icons
+.status-box ul li span:before{
+    content:'\f46c';
+    font-family: "Line Awesome Free";
+    font-size:46px;
+    font-weight: 600;
+    position:absolute;
+    left:-90px;
+    top:50%;
+    transform: translateY(-50%);
+    color:inherit;
+}
+
+.status-box ul li:nth-child(1) span:before{
+    content:'\f46c';
+}
+
+.status-box ul li:nth-child(2) span:before{
+    content:'\f560';
+}
+
+.status-box ul li:nth-child(3) span:before{
+    content:'\f563';
+}
+
+.status-box ul li:nth-child(4) span:before{
+    content:'\f0d1';
+}
+
+.status-box ul li:nth-child(5) span:before{
+    content:'\f582';
+}
+.status-box ul li{
+    position: relative;
+}
+//Line
+.status-box ul li:before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:-6px;
+    width:2px;
+    height:100%;
+    background:$dark;
+    margin-top:10px;
+}
+
+//Last dot
+.status-box ul li:nth-child(5) span:after{
+    box-shadow:0 20px 1px 20px $secondary;
+}
+
+//line
+.status-box ul li.step-completed:before{
+   background:$gray;
+}
+
+//dots
+.status-box ul li.step-completed span:after{
+    background: $gray;
+}
+//text
+.status-box ul li.step-completed span{
+    color :$gray;
+}
+
+//Current status
+.status-box ul li.current span{
+    color:$primary !important;
+}
+.status-box ul li.current span:after{
+    background: $primary !important;
+}
+
+.status-box ul li small{
+    float: right;
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+@media(max-width:1060px) {
+    .container {
+        max-width: 90%;
+    }
+    table {
+       display: block;
+       overflow-x: auto;
+       white-space: nowrap;
+    }
+}
+
+@media(max-width: 768px) {
+    .status-box ul li span:before {
+        font-size: 34px;
+  
+    }
+}
+
+.StripeElement {
+    box-sizing: border-box;
+    width: 50%;
+    margin-left: auto;
+    height: 40px;
+    padding: 10px 12px;
+
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: white;
+
+    box-shadow: 0 1px 3px 0 #e6ebf1;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
+  }
+
+  .StripeElement--focus {
+    box-shadow: 0 1px 3px 0 #cfd7df;
+  }
+
+  .StripeElement--invalid {
+    border-color: #fa755a;
+  }
+
+  .StripeElement--webkit-autofill {
+    background-color: #fefde5 !important;
+  }
+
